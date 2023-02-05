@@ -28,7 +28,7 @@
             double mat_row_val=csr.vals[nzc];
             double v=V[c];
             //printf("\nmat_val %lf, vector val: %lf\n",mat_row_val,v);
-            # pragma omp atomic
+            //# pragma omp atomic
             res[i]+=mat_row_val*v;// i maintains individual rows
             nzc++;
         }
